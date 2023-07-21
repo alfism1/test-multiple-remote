@@ -1,2 +1,7 @@
 This project pushed to github: https://github.com/alfism1/test-multiple-remote
 and pushed to gitlab: https://gitlab.com/alfism1/test-multiple-remote
+
+Push to either origin or review remote by creating alias
+    [alias]
+        pushall = "!f() { git push origin $1 && git push review $1; }; f"
+then run: git pushall main
