@@ -5,3 +5,17 @@ Push to either origin or review remote by creating alias
     [alias]
         pushall = "!f() { git push origin $1 && git push review $1; }; f"
 then run: git pushall main
+
+
+To pull from origin to review, or origin to review:
+1. git fetch origin
+2. git merge origin/<branch_name>
+3. git push review <local_branch_name>:<remote_branch_name>
+
+
+To pull from review to origin, or origin to review:
+1. git fetch review
+2. git merge review/<branch_name>
+3. git push origin <local_branch_name>:<remote_branch_name>
+
+
